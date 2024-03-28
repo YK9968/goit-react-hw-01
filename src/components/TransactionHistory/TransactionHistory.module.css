@@ -1,12 +1,23 @@
-/* .table {
+.table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 40px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.table th,
-.table td {
-  border: 1px solid #ddd;
+.title {
+  border: 1px solid #212121;
   padding: 8px;
-  text-align: left;
-} */
+  text-align: center;
+}
+
+.tableTitle {
+  background-color: rgb(54, 54, 54);
+  color: #fff;
+}
+
+.rowValue:nth-child(odd) {
+  background-color: rgb(222, 222, 222);
+}
