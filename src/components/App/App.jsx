@@ -1,4 +1,3 @@
-// import css from "./App.module.css";
 import userData from "..//../userData.json";
 import FriendList from "../FriendList/FriendList";
 import Profile from "../Profile/Profile";
@@ -16,9 +15,7 @@ export default function App() {
         image={userData.avatar}
         stats={userData.stats}
       />
-
       <FriendList friends={friends} />
-
       <TransactionHistory transactions={transactions} />
     </div>
   );
