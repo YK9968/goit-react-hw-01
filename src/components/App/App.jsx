@@ -1,5 +1,5 @@
 // import css from "./App.module.css";
-import UserData from "..//../userData.json";
+import userData from "..//../userData.json";
 import FriendList from "../FriendList/FriendList";
 import Profile from "../Profile/Profile";
 import friends from "..//../friends.json";
@@ -9,7 +9,13 @@ import transactions from "..//../transactions.json";
 export default function App() {
   return (
     <div>
-      <Profile data={UserData} />
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
       <ul>
         {friends.map((friend) => (
           <li key={friend.id}>
