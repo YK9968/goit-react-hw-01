@@ -16,20 +16,10 @@ export default function App() {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <ul>
-        {friends.map((friend) => (
-          <li key={friend.id}>
-            <FriendList friend={friend} />
-          </li>
-        ))}
-      </ul>
-      <ul>
-        {transactions.map((transaction) => (
-          <li key={transaction.id}>
-            <TransactionHistory transaction={transaction} />
-          </li>
-        ))}
-      </ul>
+
+      <FriendList friends={friends} />
+
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 }

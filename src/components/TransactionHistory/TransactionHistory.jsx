@@ -1,8 +1,9 @@
-export default function TransactionHistory({
-  transaction: { type, amount, currency },
-}) {
+import TransactionHistoryTr from "../../TransactionHistoryTr/TransactionHistoryTr";
+import css from "./TransactionHistory.module.css";
+
+export default function TransactionHistory({ transactions }) {
   return (
-    <table>
+    <table className={css.table}>
       <thead>
         <tr>
           <th>Type</th>
@@ -12,11 +13,11 @@ export default function TransactionHistory({
       </thead>
 
       <tbody>
-        <tr>
-          <td>{type}</td>
-          <td>{amount}</td>
-          <td>{currency}</td>
-        </tr>
+        {transactions.map((transaction) => (
+          <tr className={css.friendListItem} key={transaction.id}>
+            <TransactionHistoryTr transaction={transaction} />
+          </tr>
+        ))}
       </tbody>
     </table>
   );

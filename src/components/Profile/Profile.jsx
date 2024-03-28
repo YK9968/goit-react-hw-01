@@ -1,26 +1,27 @@
-// import css from "./Profile.module.css";
+import css from "./Profile.module.css";
+
 export default function Profile({ name, tag, location, image, stats }) {
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={css.container}>
+      <div className={css.imageProfileContainer}>
+        <img className={css.imageProfile} src={image} alt="User avatar" />
+        <p className={css.profileTitle}>{name}</p>
+        <p className={css.profileText}>@{tag}</p>
+        <p className={css.profileText}>{location}</p>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{stats.followers}</span>
+      <ul className={css.profileList}>
+        <li className={css.profileListItem}>
+          <span className={css.profileItemText}>Followers</span>
+          <span className={css.profileItemValue}>{stats.followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{stats.views}</span>
+        <li className={css.profileListItem}>
+          <span className={css.profileItemText}>Views</span>
+          <span className={css.profileItemValue}>{stats.views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{stats.likes}</span>
+        <li className={css.profileListItem}>
+          <span className={css.profileItemText}>Likes</span>
+          <span className={css.profileItemValue}>{stats.likes}</span>
         </li>
       </ul>
     </div>
